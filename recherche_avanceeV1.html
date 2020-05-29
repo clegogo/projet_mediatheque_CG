@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Médiatèque de quartier</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="description" content="Projet BTS SIO - SLAM" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style/bootstrap-dev/css/bootstrap.css" >
+    <link rel="stylesheet" href="style/main.css" />
+
+</head>
+
+<body>
+<div class="container">
+    <header class="row">
+        <nav class="navbar navbar-expand-md navbar-dark col-sm-12" style="background-color: #87ae75;">
+            <a class="navbar-brand" href="#">La médiathèque</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="catalogue.html">Catalogue</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Emprunts</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="emprunter.php?rep=">Emprunter</a>
+                            <a class="dropdown-item" href="retourner.php?rep=">Retourner</a>
+                            <a class="dropdown-item" href="emprunts.html?"">Mes emprunts</a>
+                        </div>
+                    </li>
+                </ul>
+                <a class="btn btn-warning my-2 my-sm-0" href="membres.html">Adhérents</a>
+            </div>
+        </nav>
+    </header>
+
+    <form action="recherche_par_auteur_Et_editeur.php" method="get">
+        <div class="form-group">
+            <label for="name_autor">Nom de l'auteur: </label>
+            <input type="text" placeholder="Auteur" id="name_autor" name="nom_auteur" aria-label="Search">
+            <div>
+                <button name="s" value="Rechercher" type="submit">Recherche</button> </p>
+                <label for="name_editor">Nom de l'éditeur: </label>
+                <input type="text" placeholder="Editeur" id="name_editor" name="nom_editeur" aria-label="Search">
+            </div>
+            <button name="s" value="Rechercher" type="submit">Recherche</button>
+        </div>
+    </form>
+
+
+    <form class="navbar" action="recherche_par_type_Et_langue.php" style="background-color: #87ae75;" method="get">
+        <ul  class="navbar-nav" >
+            <select name="type" size="1">
+                <option value="">type d'ouvrage</option>
+                <option value="5">Livre</option>
+                <option value="6">BD</option>
+                <option value="7">Film</option>
+                <option value="8">CD</option>
+            </select>
+            </p>
+            <select name="numLangue" size="1">
+                <option value="">Langue de l'ouvrage</option>
+                <option value="1">Français</option>
+                <option value="2">Anglais</option>
+                <option value="3">Japonais</option>
+            </select>
+            </p>
+            <button name="s" value="Rechercher" type="submit">Recherche</button>
+        </ul>
+    </form>
+
+    <footer class="row ">
+        <div class="card footer col-sm-12">
+            <p>Tous droits réservés...</p>
+        </div>
+    </footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
+<script src="style/bootstrap-dev/js/popper.js"></script>
+<script src="style/bootstrap-dev/js/bootstrap.js"></script>
+</body>
+
+</html>
